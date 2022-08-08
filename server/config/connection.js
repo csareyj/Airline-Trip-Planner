@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Airline-Trip-Planner', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://csareyj:<password>@cluster0.xcqyz.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
