@@ -19,10 +19,19 @@ const typeDefs = gql`
     matchups(_id: String): [Matchup]
   }
 
+  type User {
+    _id: ID!
+    name: String!
+    email: String!
+    # no password field, need to keep passwords hidden
+  }
+
   type Mutation {
     createMatchup(tech1: String!, tech2: String!): Matchup
     createVote(_id: String!, techNum: Int!): Matchup
+    createUser(name: String!, email: String!, password: String!): User
   }
+
 `;
 
 module.exports = typeDefs;

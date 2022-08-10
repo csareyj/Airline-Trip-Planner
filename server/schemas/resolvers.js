@@ -1,4 +1,4 @@
-const { Tech, Matchup } = require('../models');
+const { User, Tech, Matchup } = require('../models');
 
 const resolvers = {
   Query: {
@@ -22,6 +22,11 @@ const resolvers = {
         { new: true }
       );
       return vote;
+    },
+    createUser: async (parent, {name, email, password}) => {
+      const user = await User.create({name, email, password});
+
+      return user;
     },
   },
 };
