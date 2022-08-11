@@ -23,7 +23,6 @@ const Home = () => {
       </header>
 
       <div className="App-hero">
-        <img className='App-logo' src={logo}></img>
       </div>
 
       <h2>Where To?</h2>
