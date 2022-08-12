@@ -14,16 +14,19 @@ const typeDefs = gql`
     tech2_votes: Int
   }
 
-  type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
-  }
-
   type User {
     _id: ID!
     name: String!
     email: String!
     # no password field, need to keep passwords hidden
+  }
+
+  type Query {
+    tech: [Tech]
+    matchups(_id: String): [Matchup]
+
+    users: [User]
+    user(_id: String!): User
   }
 
   type Mutation {
