@@ -21,3 +21,13 @@ export const CREATE_VOTE = gql`
     }
   }
 `;
+
+export const CREATE_USER = gql`
+mutation createUser($name: String!, $email: String!, $password: String!) {
+  createUser(name: $name, email: $email, password: $password) {
+    _id
+    name
+    email
+  }
+}
+`;

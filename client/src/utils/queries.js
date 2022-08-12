@@ -20,3 +20,13 @@ export const QUERY_MATCHUPS = gql`
     }
   }
 `;
+
+export const QUERY_USERS = gql`
+query users {
+  users {
+    _id
+    name
+    email
+  }
+}
+`;
