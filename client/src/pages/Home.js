@@ -10,34 +10,56 @@ const Home = () => {
   const matchupList = data?.matchups || [];
 
   return (
-    <div className="card bg-white card-rounded w-50">
-      <div className="card-header bg-dark text-center">
-        <h1>Welcome to Tech Matchup!</h1>
-      </div>
-      <div className="card-body m-5">
-        <h2>Here is a list of matchups you can vote on:</h2>
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <ul className="square">
-            {matchupList.map((matchup) => {
-              return (
-                <li key={matchup._id}>
-                  <Link to={{ pathname: `/matchup/${matchup._id}` }}>
-                    {matchup.tech1} vs. {matchup.tech2}
-                  </Link>
-                </li>
-              );
-            })}
+    <div className="App">
+
+      <header className="App-header">
+        <h1>Airline Trip Planner</h1>
+        <nav>
+          <ul>
+            <li><a>My Tickets</a></li>
+            <li><a>Logout</a></li>
           </ul>
-        )}
+        </nav>
+      </header>
+
+      <div className="App-hero">
       </div>
-      <div className="card-footer text-center m-3">
-        <h2>Ready to create a new matchup?</h2>
-        <Link to="/matchup">
-          <button className="btn btn-lg btn-danger">Create Matchup!</button>
-        </Link>
-      </div>
+
+      <h2>Where To?</h2>
+      
+      <form className='App-search'>
+        <input type="input" placeholder="From..."></input>
+        <h1></h1>
+        <input type="input" placeholder="To..."></input>
+        <div>
+          <button className='App-search-btn'>Submit</button>
+        </div>
+
+      </form>
+
+      <h2>Results:</h2>
+
+      <section className='App-results'>
+        {/* here we generate the result cards, I'll leave a template card but I don't yet know how to generate them off of the database info */}
+        <div className='App-card'>
+          <h3>FLIGHT 23-J</h3>
+          <div className='Card-ori-dest'>
+            <p>FROM Philadelphia, PA</p>
+            
+            <h1></h1>
+            
+            <p>TO New York, NY</p>
+          </div>
+          <p>15 hour flight</p>
+          <p>$1200</p>
+        </div>
+      </section>
+
+      <footer>
+        <h3>collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, ans Curtis Arey</h3>
+      </footer>
+
+
     </div>
   );
 };
