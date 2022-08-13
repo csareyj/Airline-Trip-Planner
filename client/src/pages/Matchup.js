@@ -6,18 +6,13 @@ const Matchup = () => {
   return (
     <div className="App">
 
-      <header className="App-header">
-        <Link className="App-link" to="/">
-          <h1>Airline Trip Planner</h1>
-        </Link>
+<header className="App-header">
+        <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
-            <li>
-              <Link className="App-link" to={"/matchup"}>My Tickets</Link>
-            </li>
-            <li>
-              <a className="App-link" >Logout</a>
-            </li>
+            <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
+            <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
+            <li><a className='App-link'>Logout</a></li>
           </ul>
         </nav>
       </header>
