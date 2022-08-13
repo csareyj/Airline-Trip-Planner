@@ -13,10 +13,10 @@ const Home = () => {
     <div className="App">
 
       <header className="App-header">
-        <Link to='/'><h1>Airline Trip Planner</h1></Link>
+        <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
-            <li><NavLink to={"/matchup"}>My Tickets</NavLink></li>
+            <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><a>Logout</a></li>
           </ul>
         </nav>
