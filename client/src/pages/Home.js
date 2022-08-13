@@ -57,7 +57,7 @@ const Home = () => {
       </section>
 
       <footer>
-        <h3>collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, ans Curtis Arey</h3>
+        <h3>Collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, and Curtis Arey</h3>
       </footer>
 
 
