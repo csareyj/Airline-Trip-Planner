@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_MATCHUPS } from '../utils/queries';
 
@@ -13,10 +13,10 @@ const Home = () => {
     <div className="App">
 
       <header className="App-header">
-        <h1>Airline Trip Planner</h1>
+        <Link to='/'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
-            <li><a>My Tickets</a></li>
+            <li><NavLink to={"/matchup"}>My Tickets</NavLink></li>
             <li><a>Logout</a></li>
           </ul>
         </nav>
@@ -52,6 +52,7 @@ const Home = () => {
           </div>
           <p>15 hour flight</p>
           <p>$1200</p>
+        <button>Book Flight</button>
         </div>
       </section>
 
