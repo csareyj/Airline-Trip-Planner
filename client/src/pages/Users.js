@@ -27,6 +27,17 @@ const Users = () => {
 
   return (
     <div className="card bg-white card-rounded w-50">
+      
+      <header className="App-header">
+        <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
+        <nav>
+          <ul>
+            <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
+            <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
+            <li><a className='App-link'>Logout</a></li>
+          </ul>
+        </nav>
+      </header>
       <div className="card-header bg-dark text-center">
         <h1>Users List</h1>
       </div>
