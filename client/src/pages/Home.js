@@ -55,6 +55,10 @@ const Home = () => {
         </div>
       </section>
 
+      <footer>
+        <h3>collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, ans Curtis Arey</h3>
+      </footer>
+
 
     </div>
   );
