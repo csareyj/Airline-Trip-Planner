@@ -1,5 +1,6 @@
 const { User, Tech, Matchup } = require('../models');
 const { ObjectId } = require("mongoose").Types;
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
@@ -39,6 +40,27 @@ const resolvers = {
 
       return user;
     },
+
+login: async(parent, {email, password}) => {
+
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new AuthenticationError('No user with this email found!');
+  }
+
+  const correctPw = await user.comparePassword(password);
+
+  if (!correctPw) {
+    throw new AuthenticationError('Incorrect password!');
+  }
+
+
+  const token = signToken(user);
+    return {token, user};
+
+}
+
   },
 };
 

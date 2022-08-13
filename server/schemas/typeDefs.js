@@ -20,6 +20,11 @@ const typeDefs = gql`
     email: String!
     # no password field, need to keep passwords hidden
   }
+  
+  type TokenUser {
+    token: String
+    user: User
+  }
 
   type Query {
     tech: [Tech]
@@ -29,10 +34,14 @@ const typeDefs = gql`
     user(_id: String!): User
   }
 
+
+
   type Mutation {
     createMatchup(tech1: String!, tech2: String!): Matchup
     createVote(_id: String!, techNum: Int!): Matchup
     createUser(name: String!, email: String!, password: String!): User
+
+    login(email: String!, password: String!) : TokenUser
   }
 
 `;
