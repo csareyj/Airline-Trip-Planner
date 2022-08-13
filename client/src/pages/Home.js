@@ -17,8 +17,8 @@ const Home = () => {
         <nav>
           <ul>
             <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
-            <li><a>Logout</a></li>
-          </ul>
+            <li><a className="App-link" >Logout</a></li>
+          </ul> 
         </nav>
       </header>
 
