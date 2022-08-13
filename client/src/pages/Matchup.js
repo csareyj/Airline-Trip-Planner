@@ -7,16 +7,16 @@ const Matchup = () => {
     <div className="App">
 
       <header className="App-header">
-        <Link to="/">
+        <Link className="App-link" to="/">
           <h1>Airline Trip Planner</h1>
         </Link>
         <nav>
           <ul>
             <li>
-              <Link to={"/matchup"}>My Tickets</Link>
+              <Link className="App-link" to={"/matchup"}>My Tickets</Link>
             </li>
             <li>
-              <a>Logout</a>
+              <a className="App-link" >Logout</a>
             </li>
           </ul>
         </nav>
