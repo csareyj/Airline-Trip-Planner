@@ -48,13 +48,13 @@ const Users = () => {
         )}
       </div>
       <div>
-        <form>
+        <form className="Users-form">
           <label>Name</label>
-          <input type="text" name="name" placeholder="Name of Person" OnChange = {handleInputChange} value ={formState.name}/>
+          <input type="text" name="name" placeholder="Name of Person" onChange = {handleInputChange} value ={formState.name}/>
           <label>Email</label>
-          <input type="text" name="email" placeholder="Email of Person" OnChange = {handleInputChange} value ={formState.email}/>
+          <input type="text" name="email" placeholder="Email of Person" onChange = {handleInputChange} value ={formState.email}/>
           <label>Password</label>
-          <input type="password" name="password" placeholder="Password" OnChange = {handleInputChange} value ={formState.password}/>
+          <input type="password" name="password" placeholder="Password" onChange = {handleInputChange} value ={formState.password}/>
         </form>
       </div>
       <div className="card-footer text-center m-3">
