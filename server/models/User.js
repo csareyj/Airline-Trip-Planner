@@ -11,11 +11,17 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        match: [/.+@.+\..+/, 'Must match an email address!'],
+        // .+ at least one of any character (1+ wildcard)
+        // @ is just an @ symbol
+        // \. means escaped period (just a period)
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        minlength: 6,
+        match: [/[a-zA-Z0-9!]+/i, "Must use a-z or 0-0 or ! OR -"]
     }
 });
 
@@ -45,12 +51,15 @@ userSchema.pre('save', function(next) {
 //     next();
 // });
 
-userSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-    });
-};
+userSchema.methods.comparePassword = async function(candidatePassword) {
+    try{
+        const isMatch = await bcrypt.compare(candidatePassword, this.password);
+        return isMatch;
+    }catch(err){
+        console.log(err);
+        return false;
+    }    
+    };
 
 const User = model('User', userSchema);
 module.exports = User;
