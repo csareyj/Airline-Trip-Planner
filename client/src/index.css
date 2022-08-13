@@ -385,7 +385,6 @@ body {
   justify-content: center;
 }
 
-
 .App-card {
   box-shadow: #282c34 0px 10px 18px;
   margin:15px;
@@ -395,6 +394,20 @@ body {
   background-color: #657491;
   color: aliceblue;
 }
+
+.App-card li{
+  list-style: none;
+}
+
+.tickets-content {
+  display: flex;
+  justify-content: center;
+}
+.tickets-content .App-card {
+  min-width: 30vw;
+  max-width: 90px;
+}
+
 
 .Card-ori-dest p{
   display: inline-flex;
@@ -453,5 +466,6 @@ body {
   .App-search h1 {
     display: none;
   }
+
 
 }
