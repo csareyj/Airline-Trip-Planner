@@ -13,10 +13,10 @@ const Home = () => {
     <div className="App">
 
       <header className="App-header">
-        <Link to='/'><h1>Airline Trip Planner</h1></Link>
+        <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
-            <li><NavLink to={"/matchup"}>My Tickets</NavLink></li>
+            <li><Link to={"/matchup"}>My Tickets</Link></li>
             <li><Link to={"/users"}>My Profile</Link></li>
             <li><a>Logout</a></li>
           </ul>
@@ -58,7 +58,7 @@ const Home = () => {
       </section>
 
       <footer>
-        <h3>collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, ans Curtis Arey</h3>
+        <h3>Collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, and Curtis Arey</h3>
       </footer>
 
 
