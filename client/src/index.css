@@ -431,6 +431,13 @@ body {
   color: #61dafb;
 }
 
+.Users-form {
+  display: grid;
+  position: relative;
+  row-gap: 10px;
+  width: 60px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -469,3 +476,4 @@ body {
 
 
 }
+

@@ -17,6 +17,7 @@ const Home = () => {
         <nav>
           <ul>
             <li><NavLink to={"/matchup"}>My Tickets</NavLink></li>
+            <li><Link to={"/users"}>My Profile</Link></li>
             <li><a>Logout</a></li>
           </ul>
         </nav>
