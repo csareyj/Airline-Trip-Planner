@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { CREATE_VOTE } from '../utils/mutations';
 import { QUERY_MATCHUPS } from '../utils/queries';
 
-const Vote = () => {
+const Login = () => {
   let { id } = useParams();
 
   const { loading, data } = useQuery(QUERY_MATCHUPS, {
@@ -60,4 +60,4 @@ const Vote = () => {
   );
 };
 
-export default Vote;
+export default Login;
