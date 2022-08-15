@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_MATCHUPS } from '../utils/queries';
 
@@ -18,7 +18,7 @@ const Home = () => {
           <ul>
             <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
-            <li><a className='App-link'>Logout</a></li>
+            <li><Link className='App-link' to={"/login"}>Logout</Link></li>
           </ul>
         </nav>
       </header>
