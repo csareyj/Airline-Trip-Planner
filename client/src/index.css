@@ -448,11 +448,15 @@ body {
   margin-top: 20vh;
   height:200px;
   border-radius: 20px;
-  box-shadow: #282c34 0px 10px 18px;
 
 }
 
-.login-contentbox form *{
+.login-contentbox form h2 {
+  color: #61dafb;
+
+}
+
+.login-contentbox form label{
   color: #61dafb;
 }
 
@@ -464,6 +468,13 @@ body {
 .login-footer {
   text-align: center;
   color: #282c34;
+}
+
+.users-contentbox {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {
