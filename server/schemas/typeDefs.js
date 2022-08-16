@@ -1,9 +1,13 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  type FlightInfo {
     _id: ID!
     name: String!
+    price: Float!
+    departure: String!
+    destination: String!
+    duration: Int!
   }
 
   type Matchup {
@@ -27,7 +31,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    tech: [Tech]
+    FlightInfo: [FlightInfo]
     matchups(_id: String): [Matchup]
 
     users: [User]
