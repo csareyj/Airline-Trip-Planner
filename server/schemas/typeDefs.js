@@ -20,8 +20,7 @@ const typeDefs = gql`
     email: String!
     # no password field, need to keep passwords hidden
   }
-  
-  type TokenUser {
+    type TokenUser {
     token: String
     user: User
   }
