@@ -6,9 +6,9 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const { User, Tech } = require('./models');
+const { User, FlightInfo } = require('./models');
 
-const techData = require('./seeds/techData.json');
+const flightInfoData = require('./seeds/flightInfoData.json');
 const userData = require('./seeds/userData.json');
 const { authMiddleware } = require('./utils/auth');
 
@@ -39,14 +39,14 @@ const startApolloServer = async (typeDefs, resolvers) => {
   
   db.once('open', () => {
     app.get('/seedDatabase', async (req, res) => {
-      await Tech.deleteMany({});
+      await FlightInfo.deleteMany({});
       await User.deleteMany({});
 
-      const technologies = await Tech.insertMany(techData);
-      const users = await Tech.insertMany(userData);
+      const flights = await FlightInfo.insertMany(flightInfoData);
+      const users = await User.insertMany(userData);
     
       console.log('All data seeded!');
-      res.json(technologies);
+      res.json(flights);
     });
 
 
