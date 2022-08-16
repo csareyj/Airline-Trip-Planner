@@ -1,7 +1,7 @@
-import { useQuery, useMutation } from '@apollo/client';
-import { useParams, Link } from 'react-router-dom';
-import { CREATE_VOTE } from '../utils/mutations';
-import { QUERY_MATCHUPS } from '../utils/queries';
+import { useQuery, useMutation } from "@apollo/client";
+import { useParams, Link } from "react-router-dom";
+import { CREATE_VOTE } from "../utils/mutations";
+import { QUERY_MATCHUPS } from "../utils/queries";
 
 const Login = () => {
   let { id } = useParams();
@@ -25,37 +25,79 @@ const Login = () => {
   };
 
   return (
-    <div className="card bg-white card-rounded w-50">
-      <div className="card-header bg-dark text-center">
-        <h1>Here is the matchup!</h1>
-      </div>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <div className="card-body text-center mt-3">
-          <h2>
-            {matchup[0].tech1} vs. {matchup[0].tech2}
-          </h2>
-          <h3>
-            {matchup[0].tech1_votes} : {matchup[0].tech2_votes}
-          </h3>
-          <button className="btn btn-info" onClick={() => handleVote(1)}>
-            Vote for {matchup[0].tech1}
-          </button>{' '}
-          <button className="btn btn-info" onClick={() => handleVote(2)}>
-            Vote for {matchup[0].tech2}
-          </button>
-          <div className="card-footer text-center m-3">
-            <br></br>
-            <Link to="/">
-              <button className="btn btn-lg btn-danger">
-                View all matchups
-              </button>
+    <div className="login">
+      <header className="App-header">
+        <Link className="App-link" to="/">
+          <h1>Airline Trip Planner</h1>
+        </Link>
+        {/* <nav>
+        <ul>
+          <li>
+            <Link className="App-link" to={"/matchup"}>
+              My Tickets
             </Link>
-          </div>
+          </li>
+          <li>
+            <Link className="App-link" to={"/users"}>
+              My Profile
+            </Link>
+          </li>
+          <li>
+            <Link className="App-link" to={"/login"}>
+              Logout
+            </Link>
+          </li>
+        </ul>
+      </nav> */}
+      </header>
+      <div className="k">
+        <div className="login-contentbox">
+          <form className="login-form">
+            <h2>Login</h2>
+            <label for="login-email">Email Address: </label>
+            <input
+              type="text"
+              className="login-email"
+              placeholder="Email Address"
+            ></input>
+            <br></br>
+            <label for="login-email">Password: </label>
+            <input
+              type="text"
+              className="login-pass"
+              placeholder="Password"
+            ></input>
+          </form>
+
+          <form className="signup-form">
+            <h2>Sign Up</h2>
+            <label for="signup-email">Full Name: </label>
+            <input
+              type="text"
+              className="signup-name"
+              placeholder="First Last"
+            ></input>
+            <br></br>
+            <label for="signup-email">Email Address: </label>
+            <input
+              type="text"
+              className="signup-email"
+              placeholder="Email Address"
+            ></input>
+            <br></br>
+            <label for="signup-email">Password: </label>
+            <input
+              type="text"
+              className="signup-pass"
+              placeholder="Password"
+            ></input>
+          </form>
         </div>
-      )}
-      {error && <div>Something went wrong...</div>}
+
+      </div>
+      <footer className="login-footer">
+        <h3>Collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, and Curtis Arey</h3>
+      </footer>
     </div>
   );
 };

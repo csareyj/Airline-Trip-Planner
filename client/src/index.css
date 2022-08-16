@@ -344,7 +344,8 @@ END NORMALIZE CSS
 */
 
 body {
-  background-color: lightblue;
+  background: linear-gradient(180deg,transparent, lightblue );
+  height: 100vh;
 }
 
 .App {
@@ -357,12 +358,6 @@ body {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   padding: 15px;
   display: flex;
@@ -372,6 +367,7 @@ body {
   justify-content: space-between;
   font-size: calc(10px + 1vmin);
   color: white;
+  box-shadow: #657491 0px 10px 10px;
 }
 
 .App-header nav li{
@@ -437,6 +433,37 @@ body {
   position: relative;
   row-gap: 10px;
   width: 60px;
+}
+
+.k {
+  display: flex;
+  justify-content: center;
+}
+
+.login-contentbox {
+  display: flex;
+  justify-content: center;
+  background-color: #282c34;
+  width:50vw;
+  margin-top: 20vh;
+  height:200px;
+  border-radius: 20px;
+  box-shadow: #282c34 0px 10px 18px;
+
+}
+
+.login-contentbox form *{
+  color: #61dafb;
+}
+
+.login-form {
+  margin-right: 80px;
+
+}
+
+.login-footer {
+  text-align: center;
+  color: #282c34;
 }
 
 @keyframes App-logo-spin {
