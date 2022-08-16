@@ -1,11 +1,11 @@
-const { User, Tech, Matchup } = require('../models');
+const { User, FlightInfo, Matchup } = require('../models');
 const { ObjectId } = require("mongoose").Types;
 const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    FlightInfo: async () => {
+      return FlightInfo.find({});
     },
     matchups: async (parent, { _id }) => {
       const params = _id ? { _id } : {};

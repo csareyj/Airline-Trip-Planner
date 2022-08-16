@@ -1,6 +1,6 @@
-const Tech = require('./Tech');
+const FlightInfo = require('./FlightInfo');
 const Matchup = require('./Matchup');
 
 const User = require('./User');
 
-module.exports = { Tech, Matchup, User };
+module.exports = { FlightInfo, Matchup, User };
