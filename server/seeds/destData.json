@@ -1,0 +1,36 @@
+[
+    {
+
+        "city": "Las Vegas",
+        "airport": "LAS - Harry Reid Intl."
+
+    },
+
+    {
+
+        "city": "Macau",
+        "airport": "MFM - Macau Intl."
+
+    },
+    
+    {
+
+        "city": "Ibiza",
+        "airport": "IBZ - Ibiza"
+
+    },
+
+    {
+
+        "city": "Cancun",
+        "airport": "CUN - Cancun Intl."
+
+    },
+
+    {
+
+        "city": "Rio de Janiero",
+        "airport": "GIG - Antonio Carlos Jobim Intl."
+
+    }
+]

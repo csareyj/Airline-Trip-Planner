@@ -1,0 +1,36 @@
+[
+    {
+
+        "city": "New York",
+        "airport": "LGA - LaGuardia"
+
+    },
+
+    {
+
+        "city": "Philadelphia",
+        "airport": "PHL - Philadelphia Intl."
+
+    },
+
+    {
+
+        "city": "Chicago",
+        "airport": "ORD - O'Hare Inl."
+
+    },
+
+    {
+
+        "city": "Los Angeles",
+        "airport": "LAX - Los Angeles Intl."
+
+    },
+
+    {
+
+        "city": "Seattle",
+        "airport": "SEA - Seattle-Tacoma Intl."
+        
+    }
+]
