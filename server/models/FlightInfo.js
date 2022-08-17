@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const flightInfoSchema = new Schema({
-    name: { type: String, 
-            required: true },
     price:{ type: Number, 
             required: true },
     departure: { type: String,
