@@ -54,14 +54,14 @@ const Login = () => {
         <div className="login-contentbox">
           <form className="login-form">
             <h2>Login</h2>
-            <label for="login-email">Email Address: </label>
+            <label htmlFor="login-email">Email Address: </label>
             <input
               type="text"
               className="login-email"
               placeholder="Email Address"
             ></input>
             <br></br>
-            <label for="login-email">Password: </label>
+            <label htmlFor="login-email">Password: </label>
             <input
               type="text"
               className="login-pass"
@@ -71,21 +71,21 @@ const Login = () => {
 
           <form className="signup-form">
             <h2>Sign Up</h2>
-            <label for="signup-email">Full Name: </label>
+            <label htmlFor="signup-email">Full Name: </label>
             <input
               type="text"
               className="signup-name"
               placeholder="First Last"
             ></input>
             <br></br>
-            <label for="signup-email">Email Address: </label>
+            <label htmlFor="signup-email">Email Address: </label>
             <input
               type="text"
               className="signup-email"
               placeholder="Email Address"
             ></input>
             <br></br>
-            <label for="signup-email">Password: </label>
+            <label htmlFor="signup-email">Password: </label>
             <input
               type="text"
               className="signup-pass"

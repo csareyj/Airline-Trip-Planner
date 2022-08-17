@@ -41,7 +41,7 @@ const typeDefs = gql`
 
   type Mutation {
     createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    # createVote(_id: String!, techNum: Int!): Matchup
     createUser(name: String!, email: String!, password: String!): User
 
     login(email: String!, password: String!) : TokenUser
