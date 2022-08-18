@@ -10,5 +10,4 @@ const destinationSchema = new Schema({
 });
 
 const Destination = model('Destination', destinationSchema);
-
 module.exports = Destination;
