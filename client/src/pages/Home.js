@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-//import { QUERY_MATCHUPS } from '../utils/queries';
+import { QUERY_MATCHUPS } from '../utils/queries';
 
 const Home = () => {
-  // const { loading, data } = useQuery(QUERY_MATCHUPS, {
-  //   fetchPolicy: "no-cache"
-  // });
+  const { loading, data } = useQuery(QUERY_MATCHUPS, {
+    fetchPolicy: "no-cache"
+  });
 
-  // const matchupList = data?.matchups || [];
+  const matchupList = data?.matchups || [];
 
   return (
     <div className="App">
@@ -16,7 +16,7 @@ const Home = () => {
         <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
-            {/* <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li> */}
+            <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
             <li><Link className='App-link' to={"/login"}>Logout</Link></li>
           </ul>

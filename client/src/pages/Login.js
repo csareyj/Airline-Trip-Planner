@@ -30,7 +30,7 @@ const Login = () => {
         <Link className="App-link" to="/">
           <h1>Airline Trip Planner</h1>
         </Link>
-        {/* <nav>
+        <nav>
         <ul>
           <li>
             <Link className="App-link" to={"/matchup"}>
@@ -48,7 +48,7 @@ const Login = () => {
             </Link>
           </li>
         </ul>
-      </nav> */}
+      </nav>
       </header>
       <div className="k">
         <div className="login-contentbox">
