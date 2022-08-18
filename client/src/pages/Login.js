@@ -15,47 +15,47 @@ const Login = () => {
 
   const matchup = data?.matchups || [];
 
-  const [createDeparture, { error }] = useMutation(CREATE_DEPARTURE);
-  const [createDestination, { error }] = useMutation(CREATE_DESTINATION);
-  const [createDuration, { error }] = useMutation(CREATE_DURATION);
-  const [createPrice, { error }] = useMutation(CREATE_PRICE);
+  // const [createDeparture, { error }] = useMutation(CREATE_DEPARTURE);
+  // const [createDestination, { error }] = useMutation(CREATE_DESTINATION);
+  // const [createDuration, { error }] = useMutation(CREATE_DURATION);
+  // const [createPrice, { error }] = useMutation(CREATE_PRICE);
 
-  const handleVote = async (techNum) => {
-    try {
-      await createDeparture({
-        variables: { _id: id, techNum: techNum },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const handleVote = async (techNum) => {
-    try {
-      await createDestination({
-        variables: { _id: id, techNum: techNum },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const handleVote = async (techNum) => {
-    try {
-      await createDuration({
-        variables: { _id: id, techNum: techNum },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const handleVote = async (techNum) => {
-    try {
-      await createPrice({
-        variables: { _id: id, techNum: techNum },
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleVote = async (techNum) => {
+  //   try {
+  //     await createDeparture({
+  //       variables: { _id: id, techNum: techNum },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const handleVote = async (techNum) => {
+  //   try {
+  //     await createDestination({
+  //       variables: { _id: id, techNum: techNum },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const handleVote = async (techNum) => {
+  //   try {
+  //     await createDuration({
+  //       variables: { _id: id, techNum: techNum },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const handleVote = async (techNum) => {
+  //   try {
+  //     await createPrice({
+  //       variables: { _id: id, techNum: techNum },
+  //     });
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   return (
     <div className="login">
