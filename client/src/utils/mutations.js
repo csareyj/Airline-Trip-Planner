@@ -1,23 +1,39 @@
 import { gql } from '@apollo/client';
 
-export const CREATE_MATCHUP = gql`
-  mutation createMatchup($tech1: String!, $tech2: String!) {
-    createMatchup(tech1: $tech1, tech2: $tech2) {
+export const CREATE_DEPARTURE = gql`
+  mutation createDeparture($name: String!, $departure: String!) {
+    createDeparture(name: $name, departure: $departure) {
       _id
-      tech1
-      tech2
+      name
+      departure
     }
   }
 `;
 
-export const CREATE_VOTE = gql`
-  mutation createVote($_id: String!, $techNum: Int!) {
-    createVote(_id: $_id, techNum: $techNum) {
+export const CREATE_DESTINATION = gql`
+  mutation createDestination($name: String!, $destination: String!) {
+    createDestination(name1: $tech1, name: $destination) {
       _id
-      tech1
-      tech2
-      tech1_votes
-      tech2_votes
+      name
+      destination
+    }
+  }
+`;
+export const CREATE_DURATION = gql`
+  mutation createDuration($tech1: String!, $duration: Int!) {
+    createDuration(name: $name, duration: $duration) {
+      _id
+      name
+      duration
+    }
+  }
+`;
+export const CREATE_PRICE = gql`
+  mutation createPrice($name1: String!, $price: Float!) {
+    createPrice(name: $name, price: $price) {
+      _id
+      name
+      price
     }
   }
 `;
