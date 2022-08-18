@@ -1,4 +1,4 @@
-const { User, Departure, Destination, Duration, Price, Matchup } = require('../models');
+const { User, Departure, Destination, Duration, Price } = require('../models');
 const { ObjectId } = require("mongoose").Types;
 const { AuthenticationError } = require('apollo-server-express');
 
@@ -16,10 +16,10 @@ const resolvers = {
     Price: async () => {
       return Price.find({});
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+    // matchups: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return Matchup.find(params);
+    // },
 
     users: async () => {
       return User.find({});
@@ -48,10 +48,10 @@ const resolvers = {
       const price = await Price.create(args);
       return price;
     },
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
+    // createMatchup: async (parent, args) => {
+    //   const matchup = await Matchup.create(args);
+    //   return matchup;
+    // },
     // createVote: async (parent, { _id, techNum }) => {
     //   const vote = await Matchup.findOneAndUpdate(
     //     { _id },
