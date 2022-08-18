@@ -1,13 +1,29 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type FlightInfo {
+  
+  type Departure {
+    _id: ID!
+    name: String!
+    departure: String!
+  }
+
+  type Destination {
+    _id: ID!
+    name: String!
+    destination: String!
+  }
+
+  type Duration {
+    _id: ID!
+    name: String!
+    duration: Int!
+  }
+
+  type Price {
     _id: ID!
     name: String!
     price: Float!
-    departure: String!
-    destination: String!
-    duration: Int!
   }
 
   type Matchup {
@@ -31,6 +47,10 @@ const typeDefs = gql`
 
   type Query {
     FlightInfo: [FlightInfo]
+    Departure: [Departure]
+    Destination: [Destination]
+    Duration: [Duration]
+    Price: [Price]
     matchups(_id: String): [Matchup]
 
     users: [User]
@@ -40,6 +60,10 @@ const typeDefs = gql`
 
 
   type Mutation {
+    createDeparture(_id: ID!, name: String!, departure: String!): Departure
+    createDestination(_id: ID!, name: String!, destination: String!): Destination
+    createDuration(_id: ID!, name: String!, duration: Int!): Duration
+    createPrice(_id: ID!, name: String!, Price: Float!): Price
     createMatchup(tech1: String!, tech2: String!): Matchup
     # createVote(_id: String!, techNum: Int!): Matchup
     createUser(name: String!, email: String!, password: String!): User
