@@ -10,5 +10,4 @@ const departureSchema = new Schema({
 });
 
 const Departure = model('Departure', departureSchema);
-
 module.exports = Departure;
