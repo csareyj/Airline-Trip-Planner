@@ -26,13 +26,6 @@ const typeDefs = gql`
     price: Float!
   }
 
-  type Matchup {
-    _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
-  }
 
   type User {
     _id: ID!
@@ -46,13 +39,10 @@ const typeDefs = gql`
   }
 
   type Query {
-    FlightInfo: [FlightInfo]
     Departure: [Departure]
     Destination: [Destination]
     Duration: [Duration]
     Price: [Price]
-    matchups(_id: String): [Matchup]
-
     users: [User]
     user(_id: String!): User
   }
@@ -63,9 +53,7 @@ const typeDefs = gql`
     createDeparture(_id: ID!, name: String!, departure: String!): Departure
     createDestination(_id: ID!, name: String!, destination: String!): Destination
     createDuration(_id: ID!, name: String!, duration: Int!): Duration
-    createPrice(_id: ID!, name: String!, Price: Float!): Price
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    # createVote(_id: String!, techNum: Int!): Matchup
+    createPrice(_id: ID!, name: String!, Price: Float!): Price 
     createUser(name: String!, email: String!, password: String!): User
 
     login(email: String!, password: String!) : TokenUser
