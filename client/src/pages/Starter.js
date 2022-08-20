@@ -5,26 +5,23 @@ import { useParams, Link } from "react-router-dom";
 // import { QUERY_FLIGHTS } from "../utils/queries";
 
 const Starter = () => {
+  //   const initialState = useUser();
+  //   const [state, dispatch] = useReducer(reducer, initialState);
+  //   // console.log(props);
+  //   // const {appState, setAppState} = props;
+  //   const { loading, data } = useQuery(QUERY_ME, {
+  //     fetchPolicy: "no-cache"
+  //   });
 
+  //   const me = data?.me || {};
 
-//   const initialState = useUser();
-//   const [state, dispatch] = useReducer(reducer, initialState);
-//   // console.log(props);
-//   // const {appState, setAppState} = props;
-//   const { loading, data } = useQuery(QUERY_ME, {
-//     fetchPolicy: "no-cache"
-//   });
-
-//   const me = data?.me || {};
-
-//   useEffect( () => {
-//     if(me && me.hasOwnProperty("_id")){
-//       if(state.user === null || me._id !== state.user._id ){
-//         dispatch({type: LOGIN, payload: me});
-//       }
-//     }
-//   }); // want to update state on any change
-
+  //   useEffect( () => {
+  //     if(me && me.hasOwnProperty("_id")){
+  //       if(state.user === null || me._id !== state.user._id ){
+  //         dispatch({type: LOGIN, payload: me});
+  //       }
+  //     }
+  //   }); // want to update state on any change
 
   // let { id } = useParams();
 
@@ -34,7 +31,7 @@ const Starter = () => {
 
   // const flights = data?.flights || [];
 
-//   const [createFlights] = useMutation(CREATE_FLIGHTS);
+  //   const [createFlights] = useMutation(CREATE_FLIGHTS);
 
   // const handleFlights = async (name, flights) => {
   //   try {
@@ -45,12 +42,11 @@ const Starter = () => {
   //     console.error(err);
   //   }
   // };
-  
 
   return (
     <div className="starter">
       <header className="App-header">
-          <h1 className="App-link">Airline Trip Planner</h1>
+        <h1 className="App-link">Airline Trip Planner</h1>
         {/* <nav>
         <ul>
           <li>
@@ -81,7 +77,10 @@ const Starter = () => {
       </Link>
 
       <footer className="login-footer">
-        <h3>Collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, and Curtis Arey</h3>
+        <h3>
+          Collaborative effort of David Dwight, Brandon Cheung, Sam Patel,
+          Bossman Quansah, and Curtis Arey
+        </h3>
       </footer>
     </div>
   );

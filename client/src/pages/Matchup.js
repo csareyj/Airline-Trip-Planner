@@ -2,24 +2,40 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Matchup = () => {
-
   return (
     <div className="App">
-
-<header className="App-header">
-        <Link className='App-link' to='/home'><h1>Airline Trip Planner</h1></Link>
+      <header className="App-header">
+        <Link className="App-link" to="/home">
+          <h1>Airline Trip Planner</h1>
+        </Link>
         <nav>
           <ul>
-            <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
-            <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
-            <li><Link className='App-link' to={"/"}>Logout</Link></li>
+            <li>
+              <Link className="App-link" to={"/matchup"}>
+                My Tickets
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/users"}>
+                My Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/userForm"}>
+                User Form
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/"}>
+                Logout
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
 
-        <h1>My Tickets</h1>
+      <h1>My Tickets</h1>
       <div className="tickets-content">
-
         <br></br>
 
         {/* here we can loop to fill in all tickets that have been saved */}

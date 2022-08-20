@@ -68,13 +68,13 @@ const Login = () => {
             </Link>
           </li>
           <li>
-            <Link className="App-link" to={"/"}>
-              Logout
+            <Link className="App-link" to={"/userForm"}>
+              User Form
             </Link>
           </li>
           <li>
-            <Link className="App-link" to={"/userForm"}>
-              User Form
+            <Link className="App-link" to={"/"}>
+              Logout
             </Link>
           </li>
         </ul>
