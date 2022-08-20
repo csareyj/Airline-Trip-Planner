@@ -1,40 +1,21 @@
 // import { useQuery, useMutation } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
 // import { CREATE_FLIGHTS } from "../utils/mutations";
-// // import { QUERY_USERS } from "../utils/queries";
+// import { QUERY_USERS } from "../utils/queries";
 // import { QUERY_FLIGHTS } from "../utils/queries";
 
-const Login = () => {
+const Signup = () => {
 
 
-  // const initialState = useUser();
-  // const [state, dispatch] = useReducer(reducer, initialState);
-  // // console.log(props);
-  // // const {appState, setAppState} = props;
-  // const { loading, data } = useQuery(QUERY_ME, {
-  //   fetchPolicy: "no-cache"
-  // });
+//   let { id } = useParams();
 
-  // const me = data?.me || {};
+//   const { data } = useQuery(QUERY_FLIGHTS, {
+//     variables: { _id: id },
+//   });
 
-  // useEffect( () => {
-  //   if(me && me.hasOwnProperty("_id")){
-  //     if(state.user === null || me._id !== state.user._id ){
-  //       dispatch({type: LOGIN, payload: me});
-  //     }
-  //   }
-  // }); // want to update state on any change
+//   const flights = data?.flights || [];
 
-
-  // let { id } = useParams();
-
-  // const { data } = useQuery(QUERY_FLIGHTS, {
-  //   variables: { _id: id },
-  // });
-
-  // const flights = data?.flights || [];
-
-  // const [createFlights] = useMutation(CREATE_FLIGHTS);
+//   const [createFlights] = useMutation(CREATE_FLIGHTS);
 
   // const handleFlights = async (name, flights) => {
   //   try {
@@ -75,25 +56,31 @@ const Login = () => {
       </header>
       <div className="k">
         <div className="login-contentbox">
-          <form className="login-form">
-            <h2>Login</h2>
-            <label htmlFor="login-email">Email Address: </label>
+          <form className="signup-form">
+            <h2>Sign Up</h2>
+            <label htmlFor="signup-email">Full Name: </label>
             <input
               type="text"
-              className="login-email"
+              className="signup-name"
+              placeholder="First Last"
+            ></input>
+            <br></br>
+            <label htmlFor="signup-email">Email Address: </label>
+            <input
+              type="text"
+              className="signup-email"
               placeholder="Email Address"
             ></input>
             <br></br>
-            <label htmlFor="login-email">Password: </label>
+            <label htmlFor="signup-email">Password: </label>
             <input
               type="text"
-              className="login-pass"
+              className="signup-pass"
               placeholder="Password"
             ></input>
             <br></br>
-            <input  type="submit" value="Login"></input>
+            <input  type="submit" value="Sign Up"></input>
           </form>
-
         </div>
 
       </div>
@@ -104,4 +91,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
