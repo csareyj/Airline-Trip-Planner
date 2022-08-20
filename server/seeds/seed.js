@@ -2,6 +2,7 @@ const db = require('../config/connection');
 const { User, Flights } = require('../models');
 
 const userData = require('./userData.json');
+
 const flightsData = require('./flightsInfoData.json');
 
 db.once('open', async () => {

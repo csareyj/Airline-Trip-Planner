@@ -1,9 +1,37 @@
 [
-  {"departure": "New York",
-        "destination": "Dubai - DXB",
-        "price": 500.00,
-        "duration": 7,
+    {
+        "departure": "New York, NY",
+        "destination": "Dubai, UAE",        
+        "price": "$500.00",
+        "duration":"9 hours",
         "flightNumber": "SHP48"
-  }
-
+    },
+    {
+        "departure": "Philadelphia, PA",
+        "destination": "London, UK",        
+        "price": "$700.00",
+        "duration": "7 hours",
+        "flightNumber": "DD23"
+    },
+    {
+        "departure":"Washington, D.C., USA",
+        "destination":"Macau, CN",        
+        "price":"$1000.00",
+        "duration":"13 hours",
+        "flightNumber":"BC827"
+    },
+    {
+        "departure":"Los Angeles, CA",
+        "destination":"Salem, MA",        
+        "price":"$250.00",
+        "duration":"3 hours",
+        "flightNumber":"ANE145"
+    },
+    {
+        "departure":"Tampa. FL",
+        "destination":"Las Vegas, NV",        
+        "price":"$300.00",
+        "duration":"2 hours",
+        "flightNumber":"MGM102"
+    },
 ]
