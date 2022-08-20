@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
-  
+
   db.once('open', () => {
     app.get('/seedDatabase', async (req, res) => {
       await User.deleteMany({});
@@ -45,7 +45,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 
       const users = await User.insertMany(userData);
       const flights = await Flights.insertMany(flightsData);
-    
+
       console.log('All data seeded!');
       res.json(users, flights);
     });
@@ -56,8 +56,8 @@ const startApolloServer = async (typeDefs, resolvers) => {
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     })
   })
-  };
-  
+};
+
 // Call the async function to start the server
-  startApolloServer(typeDefs, resolvers);
- 
+startApolloServer(typeDefs, resolvers);
+

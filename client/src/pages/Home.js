@@ -35,7 +35,7 @@ const Home = () => {
         <h1></h1>
         <input type="input" placeholder="To..."></input>
         <div>
-          <button className='App-search-btn'>Submit</button>
+          <button className='App-search-btn'>Search</button>
         </div>
 
       </form>
