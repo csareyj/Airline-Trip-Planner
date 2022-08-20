@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_MATCHUPS } from '../utils/queries';
+import { QUERY_USERS } from "../utils/queries";
+import { QUERY_DEPARTURE } from "../utils/queries";
+import { QUERY_DESTINATION } from "../utils/queries";
+import { QUERY_PRICE } from "../utils/queries";
+import { QUERY_DURATION } from "../utils/queries";
+
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_MATCHUPS, {
