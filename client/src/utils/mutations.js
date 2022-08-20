@@ -20,7 +20,7 @@ export const CREATE_DESTINATION = gql`
   }
 `;
 export const CREATE_DURATION = gql`
-  mutation createDuration($tech1: String!, $duration: Int!) {
+  mutation createDuration($name1: String!, $duration: Int!) {
     createDuration(name: $name, duration: $duration) {
       _id
       name
