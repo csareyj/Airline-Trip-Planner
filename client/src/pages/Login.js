@@ -1,66 +1,30 @@
 import { useQuery, useMutation } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
-import { CREATE_DEPARTURE } from "../utils/mutations";
-import { CREATE_DESTINATION } from "../utils/mutations";
-import { CREATE_DURATION } from "../utils/mutations";
-import { CREATE_PRICE } from "../utils/mutations";
+import { CREATE_FLIGHTS } from "../utils/mutations";
 // import { QUERY_USERS } from "../utils/queries";
-// import { QUERY_DEPARTURE } from "../utils/queries";
-// import { QUERY_DESTINATION } from "../utils/queries";
-// import { QUERY_PRICE } from "../utils/queries";
-// import { QUERY_DURATION } from "../utils/queries";
-import { QUERY_MATCHUPS } from "../utils/queries";
+import { QUERY_FLIGHTS } from "../utils/queries";
 
 const Login = () => {
   let { id } = useParams();
 
-  const { loading, data } = useQuery(QUERY_MATCHUPS, {
+  const { loading, data } = useQuery(QUERY_FLIGHTS, {
     variables: { _id: id },
   });
 
-  const matchup = data?.matchups || [];
+  // const flights = data?.flights || [];
 
-  const [createDeparture] = useMutation(CREATE_DEPARTURE);
-  const [createDestination] = useMutation(CREATE_DESTINATION);
-  const [createDuration] = useMutation(CREATE_DURATION);
-  const [createPrice] = useMutation(CREATE_PRICE);
+  const [createFlights] = useMutation(CREATE_FLIGHTS);
 
-  // const handleDeparture = async (name, departure) => {
+  // const handleFlights = async (name, flights) => {
   //   try {
-  //     await createDeparture({
-  //       variables: { _id: id, techNum: techNum },
+  //     await createFlights({
+  //       variables: { _id: id, name: Name, destination: destination, duration: duration, departure: departure, price: price, flightNumber: flightNumber},
   //     });
   //   } catch (err) {
   //     console.error(err);
   //   }
   // };
-  // const handleDestination = async (name, destination) => {
-  //   try {
-  //     await createDestination({
-  //       variables: { _id: id, techNum: techNum },
-  //     });
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-  // const handleDuration = async (name, duration ) => {
-  //   try {
-  //     await createDuration({
-  //       variables: { _id: id, techNum: techNum },
-  //     });
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-  // const handlePrice = async (name, price) => {
-  //   try {
-  //     await createPrice({
-  //       variables: { _id: id, techNum: techNum },
-  //     });
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
+  
 
   return (
     <div className="login">

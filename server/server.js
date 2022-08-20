@@ -6,13 +6,10 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const { User, Departure, Destination, Price, Duration } = require('./models');
+const { User, Flights } = require('./models');
 
 const userData = require('./seeds/userData.json');
-const depData = require('./seeds/depData.json');
-const destData = require('./seeds/destData.json');
-const durData = require('./seeds/durData.json');
-const priceData = require('./seeds/priceData.json');
+const flightsData = require('./seeds/flightInfoData.json');
 
 const { authMiddleware } = require('./utils/auth');
 
@@ -44,20 +41,13 @@ const startApolloServer = async (typeDefs, resolvers) => {
   db.once('open', () => {
     app.get('/seedDatabase', async (req, res) => {
       await User.deleteMany({});
-      await Departure.deleteMany({});
-      await Destination.deleteMany({});
-      await Price.deleteMany({});
-      await Duration.deleteMany({});
-      
+      await Flights.deleteMany({});
 
       const users = await User.insertMany(userData);
-      const departure = await Departure.insertMany(depData);
-      const destination = await Destination.insertMany(destData);
-      const price = await Price.insertMany(priceData);
-      const duration = await Duration.insertMany(durData);
+      const flights = await Flights.insertMany(flightsData);
     
       console.log('All data seeded!');
-      res.json(users, departure, destination, duration, price);
+      res.json(users, flights);
     });
 
 
