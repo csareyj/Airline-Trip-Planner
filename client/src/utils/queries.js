@@ -22,56 +22,24 @@ query users {
 }
 `;
 
-
-// export const QUERY_DEPARTURE = gql`
-// query departure {
-
-// }
-// `;
-// export const QUERY_DESTINATION = gql`
-// query destination {
-
-// }
-// `;
-// export const QUERY_PRICE = gql`
-// query price {
-
-// }
-// `;
-// export const QUERY_DURATION = gql`
-// query duration {
-
-export const QUERY_DEPARTURE = gql`
-query departure {
+export const QUERY_FLIGHTS = gql`
+query flights {
   departure {
     city
     airport
   }
-}
-`;
-export const QUERY_DESTINATION = gql`
-query destination {
-    destination {
-      city
-      airport
-    }
-}
-`;
-
-export const QUERY_PRICE = gql`
-query price {
+  destination {
+    city
+    airport
+  }
   price {
     price
   }
-
-}
-`;
-export const QUERY_DURATION = gql`
-query duration {
   duration {
     duration
   }
-
-
-// }
-// `;
+  flightNumber {
+    flightNumber
+  }
+}
+`;

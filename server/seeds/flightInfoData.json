@@ -1,35 +1,9 @@
 [
-  {
-    "name": "JavaScript"
-  },
-  {
-    "name": "HTML"
-  },
-  {
-    "name": "CSS"
-  },
-  {
-    "name": "Node.js"
-  },
-  {
-    "name": "Express.js"
-  },
-  {
-    "name": "MySQL"
-  },
-  {
-    "name": "MongoDB"
-  },
-  {
-    "name": "React"
-  },
-  {
-    "name": "GraphQL"
-  },
-  {
-    "name": "Sequelize"
-  },
-  {
-    "name": "Handlebars.js"
+  {"departure": "New York",
+        "destination": "Dubai - DXB",
+        "price": 500.00,
+        "duration": 7,
+        "flightNumber": "SHP48"
   }
+
 ]

@@ -2,30 +2,14 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   
-  type Departure {
-    _id: ID!
-    name: String!
-    departure: String!
-  }
-
-  type Destination {
+  type Flights {
     _id: ID!
     name: String!
     destination: String!
-  }
-
-  type Duration {
-    _id: ID!
-    name: String!
-    duration: Int!
-  }
-
-  type Price {
-    _id: ID!
-    name: String!
+    departure: String!
     price: Float!
+    flightNumber: Float!
   }
-
 
   type User {
     _id: ID!
@@ -40,10 +24,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    Departure: [Departure]
-    Destination: [Destination]
-    Duration: [Duration]
-    Price: [Price]
+    Flights: [Flights]
+    
     users: [User]
     user(_id: String!): User
   }
@@ -51,10 +33,7 @@ const typeDefs = gql`
 
 
   type Mutation {
-    createDeparture(_id: ID!, name: String!, departure: String!): Departure
-    createDestination(_id: ID!, name: String!, destination: String!): Destination
-    createDuration(_id: ID!, name: String!, duration: Int!): Duration
-    createPrice(_id: ID!, name: String!, Price: Float!): Price 
+    createFlights(_id: ID!, name: String!, destination: String!, departure: String!, price: Float!, flightNumber: String!): Flights
     createUser(name: String!, email: String!, password: String!): User
 
     login(email: String!, password: String!) : TokenUser
