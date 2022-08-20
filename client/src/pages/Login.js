@@ -15,12 +15,12 @@ const Login = () => {
 
   const matchup = data?.matchups || [];
 
-  // const [createDeparture, { error }] = useMutation(CREATE_DEPARTURE);
-  // const [createDestination, { error }] = useMutation(CREATE_DESTINATION);
-  // const [createDuration, { error }] = useMutation(CREATE_DURATION);
-  // const [createPrice, { error }] = useMutation(CREATE_PRICE);
+  const [createDeparture] = useMutation(CREATE_DEPARTURE);
+  const [createDestination] = useMutation(CREATE_DESTINATION);
+  const [createDuration] = useMutation(CREATE_DURATION);
+  const [createPrice] = useMutation(CREATE_PRICE);
 
-  // const handleVote = async (techNum) => {
+  // const handleDeparture = async (name, departure) => {
   //   try {
   //     await createDeparture({
   //       variables: { _id: id, techNum: techNum },
@@ -29,7 +29,7 @@ const Login = () => {
   //     console.error(err);
   //   }
   // };
-  // const handleVote = async (techNum) => {
+  // const handleDestination = async (name, destination) => {
   //   try {
   //     await createDestination({
   //       variables: { _id: id, techNum: techNum },
@@ -38,7 +38,7 @@ const Login = () => {
   //     console.error(err);
   //   }
   // };
-  // const handleVote = async (techNum) => {
+  // const handleDuration = async (name, duration ) => {
   //   try {
   //     await createDuration({
   //       variables: { _id: id, techNum: techNum },
@@ -47,7 +47,7 @@ const Login = () => {
   //     console.error(err);
   //   }
   // };
-  // const handleVote = async (techNum) => {
+  // const handlePrice = async (name, price) => {
   //   try {
   //     await createPrice({
   //       variables: { _id: id, techNum: techNum },
