@@ -4,6 +4,11 @@ import { CREATE_DEPARTURE } from "../utils/mutations";
 import { CREATE_DESTINATION } from "../utils/mutations";
 import { CREATE_DURATION } from "../utils/mutations";
 import { CREATE_PRICE } from "../utils/mutations";
+// import { QUERY_USERS } from "../utils/queries";
+// import { QUERY_DEPARTURE } from "../utils/queries";
+// import { QUERY_DESTINATION } from "../utils/queries";
+// import { QUERY_PRICE } from "../utils/queries";
+// import { QUERY_DURATION } from "../utils/queries";
 import { QUERY_MATCHUPS } from "../utils/queries";
 
 const Login = () => {
