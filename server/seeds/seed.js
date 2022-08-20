@@ -2,7 +2,8 @@ const db = require('../config/connection');
 const { User, Flights } = require('../models');
 
 const userData = require('./userData.json');
-const flightinfoData = require('./flightinfoData.json')
+
+const flightsData = require('./flightsInfoData.json');
 
 db.once('open', async () => {
   
@@ -10,8 +11,7 @@ db.once('open', async () => {
   await Flights.deleteMany({});
 
   const users = await User.insertMany(userData);
-  const flights = await Flight.insertMany(depData);
-  
+  const flights = await Flights.insertMany(flightsData);
 
   console.log('All data seeded!');
   process.exit(0);

@@ -1,39 +1,16 @@
 import { gql } from '@apollo/client';
 
-export const CREATE_DEPARTURE = gql`
-  mutation createDeparture($name: String!, $departure: String!) {
-    createDeparture(name: $name, departure: $departure) {
+export const CREATE_FLIGHTS = gql`
+  mutation createFlights($name: String!, $departure: String!, $destination: String!, $duration: Int!, $price: Float!, $flightNumber: String!) {
+    create Flights(name: $name, departure: $departure) {
       _id
       name
       departure
-    }
-  }
-`;
-
-export const CREATE_DESTINATION = gql`
-  mutation createDestination($name: String!, $destination: String!) {
-    createDestination(name1: $tech1, name: $destination) {
-      _id
-      name
       destination
-    }
-  }
-`;
-export const CREATE_DURATION = gql`
-  mutation createDuration($name1: String!, $duration: Int!) {
-    createDuration(name: $name, duration: $duration) {
-      _id
-      name
       duration
-    }
-  }
-`;
-export const CREATE_PRICE = gql`
-  mutation createPrice($name1: String!, $price: Float!) {
-    createPrice(name: $name, price: $price) {
-      _id
-      name
       price
+      flightNumber
+
     }
   }
 `;
