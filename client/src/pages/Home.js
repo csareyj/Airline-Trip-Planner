@@ -21,6 +21,8 @@ const Home = () => {
             <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
             <li><Link className='App-link' to={"/login"}>Logout</Link></li>
+            <li><Link className="App-link" to={"/userForm"}>User Form</Link>
+          </li>
           </ul>
         </nav>
       </header>
