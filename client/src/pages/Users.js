@@ -54,11 +54,11 @@ const Users = () => {
 
       <div className="users-contentbox">
         <div className="users-card-header bg-dark text-center">
-          <h1>Users List</h1>
+          <h1>My Profile</h1>
         </div>
 
         <div className="users-card-body m-5">
-          <h2>Here is a list of users on this website:</h2>
+          <h2>Here is your Profile Information:</h2>
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -111,9 +111,9 @@ const Users = () => {
         </div>
 
         <div className="users-card-footer text-center m-3">
-          <h2>Ready to create a new matchup?</h2>
+          <h2>Ready to create a new profile?</h2>
           <Link to="/matchup">
-            <button className="btn btn-lg btn-danger">Create Matchup!</button>
+            <button className="btn btn-lg btn-danger">Create Profile!</button>
           </Link>
         </div>
       </div>
