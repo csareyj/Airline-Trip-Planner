@@ -187,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -197,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -208,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -260,8 +260,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -271,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -280,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -290,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type='search']::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -344,13 +344,12 @@ END NORMALIZE CSS
 */
 
 body {
-  background: linear-gradient(180deg,transparent, lightblue );
+  background: linear-gradient(180deg, transparent, lightblue);
   height: 100vh;
 }
 
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -370,7 +369,7 @@ body {
   box-shadow: #657491 0px 10px 10px;
 }
 
-.App-header nav li{
+.App-header nav li {
   margin: 5px;
   display: inline-table;
   list-style: none;
@@ -383,7 +382,7 @@ body {
 
 .App-card {
   box-shadow: #282c34 0px 10px 18px;
-  margin:15px;
+  margin: 15px;
   border-radius: 15px;
   min-width: 85vw;
   max-width: 90vw;
@@ -391,8 +390,7 @@ body {
   color: aliceblue;
 }
 
-
-.App-card li{
+.App-card li {
   list-style: none;
 }
 
@@ -405,21 +403,20 @@ body {
   max-width: 90px;
 }
 
-
-.Card-ori-dest p{
+.Card-ori-dest p {
   display: inline-flex;
 }
 
-.App-search div{
+.App-search div {
   justify-content: center;
 }
 
-.App-search h1{
+.App-search h1 {
   display: inline-flex;
   margin-inline: 25vw;
 }
 
-.Card-ori-dest h1{
+.Card-ori-dest h1 {
   display: inline-flex;
   margin-inline: 15vw;
 }
@@ -444,25 +441,22 @@ body {
   display: flex;
   justify-content: center;
   background-color: #282c34;
-  width:50vw;
+  width: 50vw;
   margin-top: 20vh;
-  height:200px;
+  height: 200px;
   border-radius: 20px;
-
 }
 
 .login-contentbox form h2 {
   color: #61dafb;
-
 }
 
-.login-contentbox form label{
+.login-contentbox form label {
   color: #61dafb;
 }
 
 .login-form {
   margin-right: 80px;
-
 }
 
 .login-footer {
@@ -491,14 +485,13 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
+
   .App-header {
     display: flex;
     flex-direction: column;
-
   }
 
-  .App-header nav li{
+  .App-header nav li {
     display: block;
   }
 
@@ -512,7 +505,4 @@ body {
   .App-search h1 {
     display: none;
   }
-
-
 }
-

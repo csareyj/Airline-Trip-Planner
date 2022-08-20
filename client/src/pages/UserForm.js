@@ -1,12 +1,12 @@
-import React, {useState, useReducer} from 'react';
-import { CREATE_USER } from '../utils/mutations';
-import { useMutation } from '@apollo/client';
-import { useUser } from '../context/UserContext';
-import Auth from '../utils/auth.js';
-import { useNavigate } from 'react-router-dom';
-import reducer from '../context/reducers';
+import React, { useState, useReducer } from "react";
+import { CREATE_USER } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
+import { useUser } from "../context/UserContext";
+import Auth from "../utils/auth.js";
+import { useNavigate } from "react-router-dom";
+import reducer from "../context/reducers";
 
-export default function UserForm(props){
+export default function UserForm(props) {
   const [createUser] = useMutation(CREATE_USER);
   const initialState = useUser();
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -25,30 +25,28 @@ export default function UserForm(props){
     "password-verified": true,
   });
 
-  const verify = (name, data) =>{
-    if(name === "name"){
-      if(data.length < 6){
-        return {[name + "-verified"]: false}; // something is wrong, data is not long enough
+  const verify = (name, data) => {
+    if (name === "name") {
+      if (data.length < 6) {
+        return { [name + "-verified"]: false }; // something is wrong, data is not long enough
       }
-    }
-    else if(name === "email"){
-      if(!(/.+@.+\..+/.test(data))){
-        return {[name + "-verified"]: false}; // something is wrong, regex says it is not an email
+    } else if (name === "email") {
+      if (!/.+@.+\..+/.test(data)) {
+        return { [name + "-verified"]: false }; // something is wrong, regex says it is not an email
       }
-    }
-    else if(name === "password"){
-      if(!(/[a-zA-Z0-9!-]+/i.test(data))){
-        return {[name + "-verified"]: false}; // something is wrong, regex says it is not using the right characters
+    } else if (name === "password") {
+      if (!/[a-zA-Z0-9!-]+/i.test(data)) {
+        return { [name + "-verified"]: false }; // something is wrong, regex says it is not using the right characters
       }
-      if(data.length < 6){
-        return {[name + "-verified"]: false}; // something is wrong, data is not long enough
+      if (data.length < 6) {
+        return { [name + "-verified"]: false }; // something is wrong, data is not long enough
       }
     }
     return {
-      [name + "-verified"]: true
-    }
-  }
-  const onChangeHandler = (event) =>{
+      [name + "-verified"]: true,
+    };
+  };
+  const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
 
@@ -58,45 +56,54 @@ export default function UserForm(props){
     setFormState({
       ...formState,
       ...verifyResult,
-      [name]: value
+      [name]: value,
     });
-  }
-  const submitHandler = async(event) => {
+  };
+  const submitHandler = async (event) => {
     event.preventDefault();
     // alert(JSON.stringify(formState));
-    let {name, email, password} = formState;
+    let { name, email, password } = formState;
     let tokenUser = await createUser({
       variables: {
         name,
         email,
-        password
-      }
+        password,
+      },
     });
     const token = tokenUser.data.createUser.token;
     const user = tokenUser.data.createUser.user;
     console.log(user);
     // formData.login.user
-    Auth.login(dispatch, token, {
-      login: user
-    }, navigate)
-
-  }
+    Auth.login(
+      dispatch,
+      token,
+      {
+        login: user,
+      },
+      navigate
+    );
+  };
   return (
     <section>
-    <form onSubmit={submitHandler}>
-      {(!formState["name-verified"]) ?
-        (<><span className="badge text-bg-danger">Name must be longer than 6 characters</span><br/></>)
-        : (<></>)
-      }
-      
-      Hi my name is &nbsp;
-      <input 
+      <form onSubmit={submitHandler}>
+        {!formState["name-verified"] ? (
+          <>
+            <span className="badge text-bg-danger">
+              Name must be longer than 6 characters
+            </span>
+            <br />
+          </>
+        ) : (
+          <></>
+        )}
+        Hi my name is &nbsp;
+        <input
           type="text"
           name="name"
           value={formState.name}
           onChange={onChangeHandler}
         />
-      {/* {formState["name-finished"] ? (
+        {/* {formState["name-finished"] ? (
         <>{formState.name}</>
       ) : (
         
@@ -121,32 +128,45 @@ export default function UserForm(props){
         })
         }
       /> */}
-      <br/>
-      {(!formState["email-verified"]) ?
-        (<><span className="badge text-bg-danger">Email must look like "name@company.com"</span><br/></>)
-        : (<></>)
-      }
-      Email: &nbsp;
-      <input 
+        <br />
+        {!formState["email-verified"] ? (
+          <>
+            <span className="badge text-bg-danger">
+              Email must look like "name@company.com"
+            </span>
+            <br />
+          </>
+        ) : (
+          <></>
+        )}
+        Email: &nbsp;
+        <input
           type="text"
           name="email"
           value={formState.email}
           onChange={onChangeHandler}
         />
-        <br/>
-        {(!formState["password-verified"]) ?
-        (<><span className="badge text-bg-danger">Password must be longer than 5 characters and use letters, numbers or "!" or "-".</span><br/></>)
-        : (<></>)
-      }
-      Password: &nbsp;
-      <input 
+        <br />
+        {!formState["password-verified"] ? (
+          <>
+            <span className="badge text-bg-danger">
+              Password must be longer than 5 characters and use letters, numbers
+              or "!" or "-".
+            </span>
+            <br />
+          </>
+        ) : (
+          <></>
+        )}
+        Password: &nbsp;
+        <input
           type="password"
           name="password"
           value={formState.password}
           onChange={onChangeHandler}
         />
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
     </section>
   );
 }

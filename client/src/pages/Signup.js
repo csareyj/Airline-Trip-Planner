@@ -5,17 +5,15 @@ import { useParams, Link } from "react-router-dom";
 // import { QUERY_FLIGHTS } from "../utils/queries";
 
 const Signup = () => {
+  //   let { id } = useParams();
 
+  //   const { data } = useQuery(QUERY_FLIGHTS, {
+  //     variables: { _id: id },
+  //   });
 
-//   let { id } = useParams();
+  //   const flights = data?.flights || [];
 
-//   const { data } = useQuery(QUERY_FLIGHTS, {
-//     variables: { _id: id },
-//   });
-
-//   const flights = data?.flights || [];
-
-//   const [createFlights] = useMutation(CREATE_FLIGHTS);
+  //   const [createFlights] = useMutation(CREATE_FLIGHTS);
 
   // const handleFlights = async (name, flights) => {
   //   try {
@@ -26,7 +24,6 @@ const Signup = () => {
   //     console.error(err);
   //   }
   // };
-  
 
   return (
     <div className="login">
@@ -35,24 +32,29 @@ const Signup = () => {
           <h1>Airline Trip Planner</h1>
         </Link>
         <nav>
-        <ul>
-          <li>
-            <Link className="App-link" to={"/matchup"}>
-              My Tickets
-            </Link>
-          </li>
-          <li>
-            <Link className="App-link" to={"/users"}>
-              My Profile
-            </Link>
-          </li>
-          <li>
-            <Link className="App-link" to={"/"}>
-              Logout
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          <ul>
+            <li>
+              <Link className="App-link" to={"/matchup"}>
+                My Tickets
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/users"}>
+                My Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/userForm"}>
+                User Form
+              </Link>
+            </li>
+            <li>
+              <Link className="App-link" to={"/"}>
+                Logout
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
       <div className="k">
         <div className="login-contentbox">
@@ -79,13 +81,15 @@ const Signup = () => {
               placeholder="Password"
             ></input>
             <br></br>
-            <input  type="submit" value="Sign Up"></input>
+            <input type="submit" value="Sign Up"></input>
           </form>
         </div>
-
       </div>
       <footer className="login-footer">
-        <h3>Collaborative effort of David Dwight, Brandon Cheung, Sam Patel, Bossman Quansah, and Curtis Arey</h3>
+        <h3>
+          Collaborative effort of David Dwight, Brandon Cheung, Sam Patel,
+          Bossman Quansah, and Curtis Arey
+        </h3>
       </footer>
     </div>
   );
