@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_MATCHUPS } from '../utils/queries';
+// import { QUERY_USERS } from "../utils/queries";
+import { QUERY_FLIGHTS } from "../utils/queries";
+
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_MATCHUPS, {
+  const { data } = useQuery(QUERY_FLIGHTS, {
     fetchPolicy: "no-cache"
   });
 
-  const matchupList = data?.matchups || [];
+  // const matchupList = data?.matchups || [];
 
   return (
     <div className="App">
@@ -18,7 +20,11 @@ const Home = () => {
           <ul>
             <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
+
             <li><Link className='App-link' to={"/"}>Logout</Link></li>
+            <li><Link className="App-link" to={"/userForm"}>User Form</Link>
+          </li>
+
           </ul>
         </nav>
       </header>
@@ -33,7 +39,7 @@ const Home = () => {
         <h1></h1>
         <input type="input" placeholder="To..."></input>
         <div>
-          <button className='App-search-btn'>Submit</button>
+          <button className='App-search-btn'>Search</button>
         </div>
 
       </form>

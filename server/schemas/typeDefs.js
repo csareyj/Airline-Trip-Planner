@@ -1,17 +1,14 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Tech {
+  
+  type Flights {
     _id: ID!
     name: String!
-  }
-
-  type Matchup {
-    _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    destination: String!
+    departure: String!
+    price: String!
+    flightNumber: String!
   }
 
   type User {
@@ -20,16 +17,14 @@ const typeDefs = gql`
     email: String!
     # no password field, need to keep passwords hidden
   }
-  
-  type TokenUser {
+    type TokenUser {
     token: String
     user: User
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
-
+    Flights: [Flights]
+    
     users: [User]
     user(_id: String!): User
   }
@@ -37,9 +32,8 @@ const typeDefs = gql`
 
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
-    createUser(name: String!, email: String!, password: String!): User
+    createFlights(_id: ID!, name: String!, destination: String!, departure: String!, price: String!, flightNumber: String!): Flights
+    createUser(name: String!, email: String!, password: String!): TokenUser
 
     login(email: String!, password: String!) : TokenUser
   }

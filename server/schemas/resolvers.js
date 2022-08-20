@@ -1,16 +1,17 @@
-const { User, Tech, Matchup } = require('../models');
+const { User, Flights } = require('../models');
 const { ObjectId } = require("mongoose").Types;
 const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    Flights: async () => {
+      return Flights.find({});
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+    // matchups: async (parent, { _id }) => {
+    //   const params = _id ? { _id } : {};
+    //   return Matchup.find(params);
+    // },
 
     users: async () => {
       return User.find({});
@@ -23,22 +24,27 @@ const resolvers = {
   },
 
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    createFlights: async (parent, args) => {
+      const flights = await Flights.create(args);
+      return flights;
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
+    // createMatchup: async (parent, args) => {
+    //   const matchup = await Matchup.create(args);
+    //   return matchup;
+    // },
+    // createVote: async (parent, { _id, techNum }) => {
+    //   const vote = await Matchup.findOneAndUpdate(
+    //     { _id },
+    //     { $inc: { [`tech${techNum}_votes`]: 1 } },
+    //     { new: true }
+    //   );
+    //   return vote;
+    // },
     createUser: async (parent, {name, email, password}) => {
       const user = await User.create({name, email, password});
+      const token = signToken(user);
 
-      return user;
+      return {token: token, user: user};
     },
 
 login: async(parent, {email, password}) => {

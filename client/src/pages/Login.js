@@ -1,10 +1,12 @@
 // import { useQuery, useMutation } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
+
 // import { CREATE_FLIGHTS } from "../utils/mutations";
-// // import { QUERY_USERS } from "../utils/queries";
+// import { QUERY_USERS } from "../utils/queries";
 // import { QUERY_FLIGHTS } from "../utils/queries";
 
 const Login = () => {
+
 
 
   // const initialState = useUser();
@@ -68,6 +70,11 @@ const Login = () => {
           <li>
             <Link className="App-link" to={"/"}>
               Logout
+            </Link>
+          </li>
+          <li>
+            <Link className="App-link" to={"/userForm"}>
+              User Form
             </Link>
           </li>
         </ul>

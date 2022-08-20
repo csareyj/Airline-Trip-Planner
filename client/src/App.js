@@ -6,6 +6,9 @@ import Users from './pages/Users';
 import Matchup from './pages/Matchup';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+
+import UserForm from './pages/UserForm';
+
 import NotFound from './pages/NotFound';
 import Starter from './pages/Starter'
 
@@ -39,6 +42,10 @@ function App() {
             <Route 
               path="/login" 
               element={<Login />}
+            />
+             <Route 
+              path="/userForm" 
+              element={<UserForm />}
             />
             <Route 
               path="/signup" 

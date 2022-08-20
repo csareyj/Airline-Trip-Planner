@@ -6,10 +6,11 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const { User, Tech } = require('./models');
+const { User, Flights } = require('./models');
 
-const techData = require('./seeds/techData.json');
 const userData = require('./seeds/userData.json');
+const flightsData = require('./seeds/flightInfoData.json');
+
 const { authMiddleware } = require('./utils/auth');
 
 const PORT = process.env.PORT || 3001;
@@ -36,17 +37,17 @@ app.get('/', (req, res) => {
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
-  
+
   db.once('open', () => {
     app.get('/seedDatabase', async (req, res) => {
-      await Tech.deleteMany({});
       await User.deleteMany({});
+      await Flights.deleteMany({});
 
-      const technologies = await Tech.insertMany(techData);
-      const users = await Tech.insertMany(userData);
-    
+      const users = await User.insertMany(userData);
+      const flights = await Flights.insertMany(flightsData);
+
       console.log('All data seeded!');
-      res.json(technologies);
+      res.json(users, flights);
     });
 
 
@@ -55,8 +56,8 @@ const startApolloServer = async (typeDefs, resolvers) => {
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     })
   })
-  };
-  
+};
+
 // Call the async function to start the server
-  startApolloServer(typeDefs, resolvers);
- 
+startApolloServer(typeDefs, resolvers);
+
