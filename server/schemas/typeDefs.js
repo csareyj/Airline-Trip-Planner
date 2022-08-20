@@ -7,8 +7,8 @@ const typeDefs = gql`
     name: String!
     destination: String!
     departure: String!
-    price: Float!
-    flightNumber: Float!
+    price: String!
+    flightNumber: String!
   }
 
   type User {

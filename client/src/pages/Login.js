@@ -7,7 +7,7 @@ import { QUERY_FLIGHTS } from "../utils/queries";
 const Login = () => {
   let { id } = useParams();
 
-  const { loading, data } = useQuery(QUERY_FLIGHTS, {
+  const { data } = useQuery(QUERY_FLIGHTS, {
     variables: { _id: id },
   });
 
