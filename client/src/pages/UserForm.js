@@ -2,7 +2,7 @@ import React, {useState, useReducer} from 'react';
 import { CREATE_USER } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import { useUser } from '../context/UserContext';
-import Auth from '../utils/auth';
+import Auth from '../utils/auth.js';
 import { useNavigate } from 'react-router-dom';
 import reducer from '../context/reducers';
 

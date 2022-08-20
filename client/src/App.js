@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Users from './pages/Users';
 import Matchup from './pages/Matchup';
 import Login from './pages/Login';
+import UserForm from './pages/UserForm';
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
@@ -33,6 +34,10 @@ function App() {
             <Route 
               path="/login" 
               element={<Login />}
+            />
+             <Route 
+              path="/userForm" 
+              element={<UserForm />}
             />
             <Route 
               path="*"
