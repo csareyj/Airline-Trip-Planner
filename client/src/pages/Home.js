@@ -15,14 +15,16 @@ const Home = () => {
     <div className="App">
 
       <header className="App-header">
-        <Link className='App-link' to='/'><h1>Airline Trip Planner</h1></Link>
+        <Link className='App-link' to='/home'><h1>Airline Trip Planner</h1></Link>
         <nav>
           <ul>
             <li><Link className='App-link' to={"/matchup"}>My Tickets</Link></li>
             <li><Link className='App-link' to={"/users"}>My Profile</Link></li>
-            <li><Link className='App-link' to={"/login"}>Logout</Link></li>
+
+            <li><Link className='App-link' to={"/"}>Logout</Link></li>
             <li><Link className="App-link" to={"/userForm"}>User Form</Link>
           </li>
+
           </ul>
         </nav>
       </header>
