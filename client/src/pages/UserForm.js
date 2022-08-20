@@ -74,7 +74,7 @@ export default function UserForm(props){
     });
     const token = tokenUser.data.createUser.token;
     const user = tokenUser.data.createUser.user;
-
+    console.log(user);
     // formData.login.user
     Auth.login(dispatch, token, {
       login: user

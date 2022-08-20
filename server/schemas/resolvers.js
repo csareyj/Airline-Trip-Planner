@@ -1,6 +1,7 @@
 const { User, Flights } = require('../models');
 const { ObjectId } = require("mongoose").Types;
 const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -41,8 +42,9 @@ const resolvers = {
     // },
     createUser: async (parent, {name, email, password}) => {
       const user = await User.create({name, email, password});
+      const token = signToken(user);
 
-      return user;
+      return {token: token, user: user};
     },
 
 login: async(parent, {email, password}) => {

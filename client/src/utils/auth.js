@@ -26,6 +26,7 @@ class AuthService {
 
   login(dispatch, idToken, formData, navigate) {
     // using context's dispatch
+    console.log(formData);
     dispatch({type: LOGIN, payload: formData.login.user});
     localStorage.setItem('id_token', idToken);
     
