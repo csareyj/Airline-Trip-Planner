@@ -8,10 +8,10 @@ const flightsSchema = new Schema({
     departure: { type: String, 
         required: true },
     
-    duration:{ type: Number, 
+    duration:{ type: String, 
         required: true },
     
-    price:{ type: Number, 
+    price:{ type: String, 
         required: true },
     
     flightNumber:{ type: String,

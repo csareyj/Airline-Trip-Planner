@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_MATCHUPS } from '../utils/queries';
-import { QUERY_USERS } from "../utils/queries";
+// import { QUERY_USERS } from "../utils/queries";
 import { QUERY_FLIGHTS } from "../utils/queries";
 
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_FLIGHTS, {
+  const { data } = useQuery(QUERY_FLIGHTS, {
     fetchPolicy: "no-cache"
   });
 
-  const matchupList = data?.matchups || [];
+  // const matchupList = data?.matchups || [];
 
   return (
     <div className="App">

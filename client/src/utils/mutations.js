@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const CREATE_FLIGHTS = gql`
-  mutation createFlights($name: String!, $departure: String!, $destination: String!, $duration: Int!, $price: Float!, $flightNumber: String!) {
-    create Flights(name: $name, departure: $departure) {
+  mutation createFlights($name: String!, $departure: String!, $destination: String!, $duration: String!, $price: String!, $flightNumber: String!) {
+    createFlights(name: $name, departure: $departure, duration: $duration, destination: $destination, price: $price, flightNumber: $flightNumber) {
       _id
       name
       departure
@@ -10,7 +10,6 @@ export const CREATE_FLIGHTS = gql`
       duration
       price
       flightNumber
-
     }
   }
 `;
