@@ -67,14 +67,22 @@ const Starter = () => {
         </ul>
       </nav> */}
       </header>
+      <div className="k">
+        <div className="login-contentbox">
+          <div className="starter-card">
+            <h2 className="App-link">Returning?</h2>
+            <Link className="App-link" to={"/login"}>
+              login
+            </Link>
+            <br></br>
+            <h2 className="App-link">New?</h2>
 
-      <Link className="App-link" to={"/login"}>
-        login
-      </Link>
-      <br></br>
-      <Link className="App-link" to={"/signup"}>
-        signup
-      </Link>
+            <Link className="App-link" to={"/signup"}>
+              signup
+            </Link>
+          </div>
+        </div>
+      </div>
 
       <footer className="login-footer">
         <h3>

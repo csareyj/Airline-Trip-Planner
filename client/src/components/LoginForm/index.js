@@ -37,24 +37,25 @@ const LoginForm = () => {
     Auth.login(dispatch, result.data.login.token, result.data, navigate);
   }
   return (
-    <form onSubmit={onFormSubmit}>
-      <div className="input-group mb-3">
-        <span className="input-group-text" id="email-label">Email</span>
+    <form className="login-form" onSubmit={onFormSubmit}>
+      
+      <h2>Login</h2>
+      
+      <label htmlFor="login-email">Email Address: </label>
         <input 
           name="email" type="text" className="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-label" 
           value={formState.email}
           onChange={handleChange}
           />
-      </div>
-      <div className="input-group mb-3">
-        <span className="input-group-text" id="password-label">Password</span>
+          <br></br>
+            <label htmlFor="login-email">Password: </label>
         <input 
           name="password" type="password" className="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-label" 
           value={formState.password}
           onChange={handleChange}
         />
-      </div>
-      <button type="submit" className="btn btn-primary">Login</button>
+        <br></br>
+      <button type="submit" >Login</button>
     </form>
   );
 };

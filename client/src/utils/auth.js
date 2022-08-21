@@ -33,7 +33,7 @@ class AuthService {
     // prevents a complete refresh of the site
     // allows react state to stay intact
     // it hooks in to react router provider to change the page
-    navigate("/", {replace: true}) 
+    navigate("/home", {replace: true}) 
     // window.location.assign('/');
   }
 

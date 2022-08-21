@@ -23,3 +23,12 @@ export const QUERY_FLIGHTS = gql`
   }
 }
 `;
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      name
+      email
+    }
+  }
+`;
