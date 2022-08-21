@@ -471,6 +471,10 @@ body {
   align-items: center;
 }
 
+  .starter-card .App-link{
+    margin: 5px;
+    font-size: 30px;
+  }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -505,4 +509,5 @@ body {
   .App-search h1 {
     display: none;
   }
+
 }
