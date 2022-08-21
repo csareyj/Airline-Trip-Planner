@@ -13,8 +13,8 @@ const LoginForm = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const [formState, setFormState] = useState({
-    email: "turtle@turtle.com",
-    password: "password1111"
+    email: "",
+    password: ""
   });
 
   const handleChange = (event) => {
