@@ -28,7 +28,7 @@
         "flightNumber":"ANE145"
     },
     {
-        "departure":"Tampa. FL",
+        "departure":"Tampa, FL",
         "destination":"Las Vegas, NV",        
         "price":"$300.00",
         "duration":"2 hours",

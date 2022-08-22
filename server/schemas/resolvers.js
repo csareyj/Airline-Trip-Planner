@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    Flights: async () => {
+    flights: async () => {
       return Flights.find({});
     },
     // matchups: async (parent, { _id }) => {

@@ -7,6 +7,7 @@ const typeDefs = gql`
     name: String!
     destination: String!
     departure: String!
+    duration: String!
     price: String!
     flightNumber: String!
   }
@@ -23,7 +24,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    Flights: [Flights]
+    flights: [Flights]
     
     users: [User]
     user(_id: String!): User
