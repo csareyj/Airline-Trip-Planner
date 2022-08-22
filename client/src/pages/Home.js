@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 // import { QUERY_USERS } from "../utils/queries";
 import { QUERY_FLIGHTS } from "../utils/queries";
+import { CREATE_FLIGHTS } from "../utils/mutations";
 
 const Home = () => {
   const { data } = useQuery(QUERY_FLIGHTS, {
