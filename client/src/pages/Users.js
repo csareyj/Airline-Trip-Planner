@@ -29,7 +29,7 @@ const Users = () => {
     <div className="card bg-white card-rounded w-50">
       <header className="App-header">
         <Link className="App-link" to="/home">
-          <h1>Airline Trip Planner</h1>
+          <h1>Winging It!</h1>
         </Link>
         <nav>
           <ul>
@@ -38,16 +38,11 @@ const Users = () => {
                 My Tickets
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="App-link" to={"/users"}>
                 My Profile
               </Link>
-            </li>
-            <li>
-              <Link className="App-link" to={"/userForm"}>
-                User Form
-              </Link>
-            </li>
+            </li> */}
             <li>
               <Link className="App-link" to={"/"}>
                 Logout

@@ -54,10 +54,8 @@ const Login = () => {
   return (
     <div className="login">
       <header className="App-header">
-        <Link className="App-link" to="/home">
-          <h1>Airline Trip Planner</h1>
-        </Link>
-        <nav>
+          <h1 className="App-link">Winging It!</h1>
+        {/* <nav>
           <ul>
             <li>
               <Link className="App-link" to={"/matchup"}>
@@ -80,7 +78,7 @@ const Login = () => {
               </Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </header>
       <div className="k">
         <div className="login-contentbox">
