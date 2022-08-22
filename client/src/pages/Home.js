@@ -14,7 +14,7 @@ const Home = () => {
     <div className="App">
       <header className="App-header">
         <Link className="App-link" to="/home">
-          <h1>Airline Trip Planner</h1>
+          <h1>Winging It!</h1>
         </Link>
         <nav>
           <ul>
@@ -29,11 +29,6 @@ const Home = () => {
               </Link>
             </li>
 
-            <li>
-              <Link className="App-link" to={"/userForm"}>
-                User Form
-              </Link>
-            </li>
             <li>
               <Link className="App-link" to={"/"}>
                 Logout
