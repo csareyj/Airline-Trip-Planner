@@ -345,7 +345,7 @@ END NORMALIZE CSS
 
 body {
   background: linear-gradient(180deg, transparent, lightblue);
-  height: 100%;
+  height: 2000px;
 }
 
 .App {
@@ -379,6 +379,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  list-style: none;
 }
 
 .App-card {
