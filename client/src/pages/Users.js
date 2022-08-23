@@ -29,7 +29,7 @@ const Users = () => {
     <div className="card bg-white card-rounded w-50">
       <header className="App-header">
         <Link className="App-link" to="/home">
-          <h1>Winging It!</h1>
+          <h1>✈ WinginGit ✈</h1>
         </Link>
         <nav>
           <ul>

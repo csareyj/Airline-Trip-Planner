@@ -30,7 +30,7 @@ const Home = () => {
     <div className="App">
       <header className="App-header">
         <Link className="App-link" to="/home">
-          <h1>Winging It!</h1>
+          <h1>✈ WinginGit ✈</h1>
         </Link>
         <nav>
           <ul>
@@ -78,7 +78,7 @@ const Home = () => {
             <div className="Card-ori-dest">
               <p>From {flight.departure}</p>
   
-              <h1></h1>
+              <h1>⇨</h1>
   
               <p>To {flight.destination}</p>
             </div>
