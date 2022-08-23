@@ -46,7 +46,7 @@ const Starter = () => {
   return (
     <div className="starter">
       <header className="App-header">
-        <h1 className="App-link">Winging It!</h1>
+        <h1 className="App-link">✈ WinginGit ✈</h1>
         {/* <nav>
         <ul>
           <li>

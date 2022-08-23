@@ -6,7 +6,7 @@ const Matchup = () => {
     <div className="App">
       <header className="App-header">
         <Link className="App-link" to="/home">
-          <h1>Winging It!</h1>
+          <h1>✈ WinginGit ✈</h1>
         </Link>
         <nav>
           <ul>
