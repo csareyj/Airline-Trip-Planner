@@ -14,7 +14,6 @@ export const QUERY_FLIGHTS = gql`
   query flights {
     flights {
     _id
-    name
     destination
     departure
     duration

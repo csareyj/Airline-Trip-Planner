@@ -3,7 +3,7 @@ const { User, Flights } = require('../models');
 
 const userData = require('./userData.json');
 
-const flightsData = require('./flightsInfoData.json');
+const flightsData = require('./flightInfoData.json');
 
 db.once('open', async () => {
   
