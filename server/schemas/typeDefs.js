@@ -4,7 +4,6 @@ const typeDefs = gql`
   
   type Flights {
     _id: ID!
-    name: String!
     destination: String!
     departure: String!
     duration: String!
@@ -33,7 +32,7 @@ const typeDefs = gql`
 
 
   type Mutation {
-    createFlights(_id: ID!, name: String!, destination: String!, departure: String!, price: String!, flightNumber: String!): Flights
+    createFlights(_id: ID!, destination: String!, departure: String!, price: String!, flightNumber: String!): Flights
     createUser(name: String!, email: String!, password: String!): TokenUser
 
     login(email: String!, password: String!) : TokenUser
