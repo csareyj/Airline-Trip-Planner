@@ -87,7 +87,7 @@ const Home = () => {
             <button>Book Flight</button>
           </div>
           )
-        })};
+        })}
       </section>
 
       <footer>
