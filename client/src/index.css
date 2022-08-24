@@ -398,6 +398,7 @@ body {
 
 .tickets-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .tickets-content .App-card {
