@@ -9,8 +9,21 @@ const Home = () => {
   const { data } = useQuery(QUERY_FLIGHTS, {
     fetchPolicy: "no-cache",
   });
+
   const testFunction = () => {
     console.log(data);
+  }
+
+  function addCartDemo(myObj){
+
+    if(localStorage.getItem('project3') == null){
+      localStorage.setItem('project3', '[]');
+    }
+    var cart = JSON.parse(localStorage.getItem('project3'));
+    cart.push(myObj);
+
+    localStorage.setItem('project3', JSON.stringify(cart));
+    console.log(localStorage);
   }
 
   const flightList = data?.flights || [];
@@ -85,7 +98,7 @@ const Home = () => {
             </div>
             <p>{flight.duration}</p>
             <p>{flight.price}</p>
-            <button>Book Flight</button>
+            <button onClick={() => addCartDemo(flight)}>Book Flight</button>
           </div>
           </li>
           )
