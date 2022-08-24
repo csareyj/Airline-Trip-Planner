@@ -8,9 +8,9 @@ const Matchup = () => {
   function cancellation() {
     
     localStorage.setItem('project3', '[]');
-  console.log("cart after: " + localStorage.getItem('project3'));
 
   window.location.reload(false);
+  console.log("cart after: " + localStorage.getItem('project3'));
   }
   return (
     <div className="App">
@@ -46,7 +46,6 @@ const Matchup = () => {
         {/* here we can loop to fill in all tickets that have been saved */}
         {cart.map(flight => {
           return (
-            <li>
             <div className="App-card">
             <h3>FLIGHT {flight.flightNumber}</h3>
             <div className="Card-ori-dest">
@@ -59,7 +58,6 @@ const Matchup = () => {
             <p>{flight.duration}</p>
             <p>{flight.price}</p>
           </div>
-          </li>
             
           )
         })}
