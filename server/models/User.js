@@ -22,7 +22,11 @@ const userSchema = new Schema({
         required: true,
         minlength: 6,
         match: [/[a-zA-Z0-9!]+/i, "Must use a-z or 0-0 or ! OR -"]
-    }
+    },
+    flightList: [{
+        type: Schema.Types.ObjectId,
+        ref: "Flights"
+    }]
 });
 
 userSchema.pre('save', function(next) {

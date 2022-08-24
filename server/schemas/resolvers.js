@@ -14,11 +14,15 @@ const resolvers = {
     // },
 
     users: async () => {
-      return User.find({});
+      return await User.find({}).populate("flightList");
     },
 
     user: async (parent, { _id }) => {
-      return User.findOne({_id: ObjectId(_id)});
+      return User.findOne({_id: ObjectId(_id)}).populate("flightList");
+    },
+
+    me: async (parent, { _id }) => {
+      return User.findOne({_id: ObjectId(_id)}).populate("flightList");
     }
       
   },
