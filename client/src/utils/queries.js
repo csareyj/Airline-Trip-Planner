@@ -6,6 +6,14 @@ query users {
     _id
     name
     email
+    flightList{
+    _id
+    destination
+    departure
+    duration
+    price
+    flightNumber
+    }
   }
 }
 `;
@@ -28,6 +36,14 @@ export const QUERY_ME = gql`
       _id
       name
       email
+      flightList{
+      _id
+      destination
+      departure
+      duration
+      price
+      flightNumber
+      }
     }
   }
 `;
