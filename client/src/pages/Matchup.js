@@ -2,6 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Matchup = () => {
+  var cart = JSON.parse(localStorage.getItem('project3'));
+  console.log("cart: " + cart);
+
+  function cancellation() {
+    
+    localStorage.setItem('project3', '[]');
+  console.log("cart after: " + localStorage.getItem('project3'));
+
+  window.location.reload(false);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -34,16 +44,29 @@ const Matchup = () => {
         <br></br>
 
         {/* here we can loop to fill in all tickets that have been saved */}
+        {cart.map(flight => {
+          return (
+            <li>
+            <div className="App-card">
+            <h3>FLIGHT {flight.flightNumber}</h3>
+            <div className="Card-ori-dest">
+              <p>From {flight.departure}</p>
+  
+              <h1>⇨</h1>
+  
+              <p>To {flight.destination}</p>
+            </div>
+            <p>{flight.duration}</p>
+            <p>{flight.price}</p>
+          </div>
+          </li>
+            
+          )
+        })}
 
-        <div className="App-card">
-          <ul>
-            <li>Flight 23-J</li>
-            <li>Philadelphia to New York</li>
-            <li>$1200 Round Trip</li>
-          </ul>
-          <button>Cancel Flight</button>
-        </div>
+        
       </div>
+            <button onClick={() => cancellation()}>Cancel Bookings</button>
     </div>
   );
 };
